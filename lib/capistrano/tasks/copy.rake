@@ -38,7 +38,7 @@ namespace :copy do
 
   task :clean do |t|
     # Delete the local archive
-    File.delete archive_name if File.exists? archive_name
+    File.delete archive_name if File.exist? archive_name
   end
 
   after 'deploy:finished', 'copy:clean'
